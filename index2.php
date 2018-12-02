@@ -15,13 +15,13 @@ include 'connectdb.php'
 <h2>OUR CUSTOMERS</h2> <!-- form to get customer information -->
 <form action="costasc.php" method="post">
 <?php
-$query = "SELECT * FROM customers ORDER BY firstname"
-$result = mysqli_query($conenction, $query)
+$query = "SELECT * FROM customers ORDER BY firstname";
+$result = mysqli_query($conenction, $query);
 if(!$result){
 die("database query failed");
 }
 
-echo "<ol>"
+echo "<ol>";
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<li>";
     echo $row["fistname"];
@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "</li>";
 }
 mysqli_free_result($result);
-echo "</ol>"
+echo "</ol>";
 ?>
 </form> 
 
