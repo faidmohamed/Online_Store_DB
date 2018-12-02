@@ -10,7 +10,7 @@
 
 <form action="costasc.php" method="post">
 <?php
-    $query = "SELECT * FROM customers ORDER BY firstname";
+    $query = "SELECT * FROM customer ORDER BY firstname";
     $result = mysqli_query($connection, $query);
     if(!$result){
         die("database query failed");
