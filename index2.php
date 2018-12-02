@@ -21,7 +21,7 @@
             .$row["firstname"].' '.$row["lastname"];
         echo "<br>";
         echo "City: ".$row["city"]."<br>";
-        echo "Phone Number: ".$row["phonenumber"]."<br>";
+        echo "Phone Number: ".$row["phonenumber"]."<br>"."<br>";
     }
     mysqli_free_result($result);
     ?>
