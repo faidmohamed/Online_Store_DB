@@ -15,16 +15,14 @@
     if(!$result){
         die("database query failed");
     }
-
-    echo "<ol>";
     while ($row = mysqli_fetch_assoc($result)) {
         echo '<input type="radio" name = "customer" value = '
             .$row["cusID"].'>'
-            .$row["firstname"].' '.row["lastname"];
+
+        echo $row["firstname"].' '.$row["lastname"];
         echo "<br>";
     }
     mysqli_free_result($result);
-    echo "</ol>";
     ?>
 </form> 
 
