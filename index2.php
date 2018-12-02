@@ -10,7 +10,7 @@
 
 <form action="costasc.php" method="post">
 <?php
-    $query = "SELECT * FROM customer ORDER BY firstname";
+    $query = "SELECT * FROM customer ORDER BY lastname";
     $result = mysqli_query($connection, $query);
     if(!$result){
         die("database query failed");
@@ -18,17 +18,10 @@
 
     echo "<ol>";
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "<li>";
-        echo $row["firstname"];
-        echo " ";
-        echo $row["lastname"];
+        echo '<input type="radio" name = "customer" value = '
+            .$row["cusID"].'>'
+            .$row["firstname"]." ".row["lastname"]
         echo "<br>";
-        echo "City: ".$row["city"];
-        echo "<br>";
-        echo "Phone Number: ".$row["phonenumber"];
-        echo "<br>";
-        echo "<br>";
-        echo "</li>";
     }
     mysqli_free_result($result);
     echo "</ol>";
