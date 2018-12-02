@@ -9,5 +9,8 @@ if (mysqli_connect_errno()) {
      mysqli_connect_error() .
      "(" . mysqli_connect_errno() . ")"
          );
-    }
+}
+else {
+	die("connection successful");
+}
 ?>
