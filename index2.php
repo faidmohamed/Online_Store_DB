@@ -26,6 +26,7 @@
     }
     mysqli_free_result($result);
     ?>
+<input type="submit" value="Get More information">
 </form> 
 
 </body>
