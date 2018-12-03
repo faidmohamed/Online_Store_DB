@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Add Customer</title>
 </head>
+
    <body>
       <?php
          include 'connectdb.php';
@@ -28,4 +29,5 @@
          echo '<br>';
       ?>
    </body>
+   
 </html>
