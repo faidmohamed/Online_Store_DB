@@ -27,14 +27,12 @@
             $newQuantity = (string)$newQuan;
 
             $query2 = 'UPDATE purchases SET quantity =' . $newQuantity . ' WHERE purchases.prodID = ' . $prodID . ' AND purchases.cusID = ' . $cusID;
-            echo $query2;
-            echo "<br>";
 
             if (!mysqli_query($connection, $query2)) {
                   die("ERROR2: insert failed - " . mysqli_error($connection));
             }
          }
-         echo "a purchase has been added";
+         echo "the requested purchase has successfully been added";
          mysqli_close($connection);
       ?>
    </body>
