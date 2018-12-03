@@ -8,18 +8,18 @@
       <?php
          include 'connectdb.php';
       ?>
-      
+
       <?php
          $cusID =  $_POST["customer"];
          $prodID = $_POST["product"];
          
-         $pull_query = 'SELECT quantity FROM purchases WHERE purchases.prodID = '. $prodID . 'AND purchases.cusID = ' .$cusID;
+         $pull_query = 'SELECT * FROM purchases WHERE purchases.prodID = '. $prodID . 'AND purchases.cusID = ' .$cusID;
 
          $result = mysqli_query($connection,$pull_query);
          if (!$result) {
             $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $prodID . '","'. 1 . '")';
             if (!mysqli_query($connection, $query)) {
-               die("ERROR: insert failed - " . mysqli_error($connection));
+               die("ERROR1: insert failed - " . mysqli_error($connection));
             }
          }
 
@@ -30,7 +30,7 @@
          $query = "UPDATE purchases SET quanitity = " . $newQuantity . " WHERE purchases.prodID = " . $prodID . " AND purchases.cusID = " .$cusID;
          
          if (!mysqli_query($connection, $query)) {
-               die("ERROR: insert failed - " . mysqli_error($connection));
+               die("ERROR2: insert failed - " . mysqli_error($connection));
          }
 
          echo "a purchase has been added";
