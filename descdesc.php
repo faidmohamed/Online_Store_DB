@@ -13,7 +13,7 @@ include 'connectdb.php';
 <?php
    $whichOwner= $_POST["customer"];
    $query = "SELECT * FROM customer, purchases, product WHERE customer.cusID =  purchases.cusID 
-            AND product.prodID = purchases.prodID ORDER BY cost ASC";
+            AND product.prodID = purchases.prodID ORDER BY description DESC";
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query2 failed.");
