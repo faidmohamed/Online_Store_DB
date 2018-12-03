@@ -12,10 +12,9 @@
       <?php
          $cusID =  $_POST["customer"];
          $prodID = $_POST["product"];
-         echo $cusID;
+         $pull_query = 'SELECT * FROM purchases WHERE purchases.cusID = '. $prodID . 'AND purchases.cusID = ' .$cusID;
+         echo $pull_query;
          echo "<br>";
-         echo $prodID;
-         $pull_query = 'SELECT * FROM purchases WHERE purchases.prodID = '. $prodID . 'AND purchases.cusID = ' .$cusID;
 
          $result = mysqli_query($connection,$pull_query);
          if (!$result) {
