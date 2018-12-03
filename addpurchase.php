@@ -27,7 +27,7 @@
          $newQuantity = (string)$newkey;
 
          $query2 = 'UPDATE purchases SET quanitity =' . $newQuantity . ' WHERE purchases.prodID = ' . $prodID . ' AND purchases.cusID = ' . $cusID;
-         echo $query;
+         echo $query2;
          echo "<br>";
 
          if (!mysqli_query($connection, $query2)) {
