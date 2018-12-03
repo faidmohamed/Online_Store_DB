@@ -13,8 +13,9 @@
    $lname = $_POST["lastname"];
    $city =  $_POST["city"];
    $phonenumber =  $_POST["phonenumber"];
-   $pull_query= 'SELECT MAX(cusID) AS maxid FROM customer';
-   $result=mysqli_query($connection,$pull_query);
+   $AgentID = NULL;
+   $pull_query = 'SELECT MAX(cusID) AS maxid FROM customer';
+   $result = mysqli_query($connection,$pull_query);
    if (!$result) {
       die("database max query failed.");
    }
@@ -31,8 +32,8 @@
    echo '<br>';
    echo $phonenumber;
    echo '<br>';
-   
-   $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '")';
+
+   $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '","' . $AgentID . '")';
 
    if (!mysqli_query($connection, $query)) {
         die("ERROR: insert failed - " . mysqli_error($connection));
