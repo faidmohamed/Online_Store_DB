@@ -49,7 +49,7 @@
         ?>
     <br><br>
         <?php
-            echo "<h4> Customer: </h4>";
+            echo "<h4> Purchase: </h4>";
             $query = "SELECT * FROM product ORDER BY description";
             $result = mysqli_query($connection, $query);
             if(!$result){
@@ -63,8 +63,8 @@
             }
             mysqli_free_result($result);
         ?>
-    
-    <input type="submit" value="Add Customer">
+    <br>
+    <input type="submit" value="Add Purchase">
 </form>
 <br>
 
