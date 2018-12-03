@@ -32,14 +32,12 @@
 <br>
 <h2> Add Customer:</h2> <!-- form to add a new customer to the database -->
 <form action="addcustomer.php" method="post" >
-    <?php
-        echo 'First Name:'.'\t'.'<input type="text" name="firstname"><br>'
-    ?>
-        Last Name:      <input type="text" name="lastname"><br>
-        City:           <input type="text" name="city"><br>
-        Phone Number:   <input type="text" name="phonenum"><br>
-        
-        <input type="submit" value="Add Customer">
+    First Name:     <input type="text" name="firstname"><br>
+    Last Name:      <input type="text" name="lastname"><br>
+    City:           <input type="text" name="city"><br>
+    Phone Number:   <input type="text" name="phonenum"><br>
+    
+    <input type="submit" value="Add Customer">
 </form>
 
 </body>
