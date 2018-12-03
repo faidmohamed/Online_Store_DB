@@ -31,7 +31,7 @@
 
 <br>
 <h2> Add Purchase:</h2> <!-- form to add a new customer to the database -->
-<form action="addcustomer.php" method="post" >
+<form action="addpurchase.php" method="post" >
     <?php
             echo "<h4> Customer: </h4>";
             $query = "SELECT * FROM customer ORDER BY lastname";
