@@ -42,6 +42,10 @@ include 'connectdb.php';
 <input type="submit" value="sort by description: descending">
 </form> 
 
+<form action="index2.php" method="post">
+<input type="submit" value="go back">
+</form> 
+
 <?php
    mysqli_close($connection);
 ?>
