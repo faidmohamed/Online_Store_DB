@@ -21,7 +21,7 @@
    $row=mysqli_fetch_assoc($result);
    $newkey = intval($row["maxid"]) + 1;
    $cusID = (string)$newkey;
-   $query = 'INSERT INTO pet values("' . $cusID . '","' . $firstname . '","'. $lastname . '","' . $city . '","' . $phonenumber . '")';
+   $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $firstname . '","'. $lastname . '","' . $city . '","' . $phonenumber . '")';
 
    if (!mysqli_query($connection, $query)) {
         die("Error: insert failed" . mysqli_error($connection));
