@@ -29,18 +29,16 @@
 <input type="submit" value="Get More information">
 </form> 
 
-<div>
-        <br>
-        <h2> ADD A NEW CUSTOMER:</h2> <!-- form to add a new customer to the database -->
-        <form action="addcustomer.php" method="post" >
-            Customer's First Name: <input type="text" name="firstname"><br><br>
-            Customer's Last Name: <input type="text" name="lastname"><br><br>
-            Customer's City <input type="text" name="city"><br><br>
-            Customer's Phone Number: <input type="text" name="phonenum"><br><br>
-            
-            <input type="submit" value="Add New Customer">
-        </form>
-    </div>
+<br>
+<h2> Add Customer:</h2> <!-- form to add a new customer to the database -->
+<form action="addcustomer.php" method="post" >
+    First Name:     <input type="text" name="firstname"><br>
+    Last Name:      <input type="text" name="lastname"><br>
+    City            <input type="text" name="city"><br>
+    Phone Number:   <input type="text" name="phonenum"><br>
+    
+    <input type="submit" value="Add Customer">
+</form>
 
 </body>
 </html>
