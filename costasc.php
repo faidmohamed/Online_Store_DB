@@ -18,13 +18,13 @@ include 'connectdb.php';
     if (!$result) {
          die("database query2 failed.");
      }
-    echo "<ol>"
+    echo "<ol>";
     while ($row=mysqli_fetch_assoc($result)) {
         echo '<li>';
         echo $row["description"]."\t".$row["cost"];
         echo '</li>';
      }
-    echo "</ol>"
+    echo "</ol>";
      mysqli_free_result($result);
 ?>
 </ol>
