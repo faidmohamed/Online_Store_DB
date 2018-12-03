@@ -8,7 +8,6 @@
 <?php
    include 'connectdb.php';
 ?>
-<h1>Here are your pets:</h1>
 <?php
    $fname=  $_POST["firstname"];
    $lname = $_POST["lastname"];
@@ -22,8 +21,8 @@
    $row=mysqli_fetch_assoc($result);
    $newkey = intval($row["maxid"]) + 1;
    $cusID = (string)$newkey;
-   $query = 'INSERT INTO customer VALUES("' . $cusID . '","'. $fname . '","' . $lname . '","' 
-   			. $city  '","' . $phonenumber . '")';
+   $query = 'INSERT INTO pet values("' . $cusID . '","' . $firstname . '","'. $lastname . '","' . $city . '","' . $phonenumber . '")';
+
    if (!mysqli_query($connection, $query)) {
         die("Error: insert failed" . mysqli_error($connection));
     }
