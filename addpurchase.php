@@ -21,19 +21,19 @@
                die("ERROR1: insert failed - " . mysqli_error($connection));
             }
          }
+         else{
+            $row=mysqli_fetch_assoc($result);
+            $newQuan = intval($row["quantity"]) + 1;
+            $newQuantity = (string)$newkey;
 
-         $row=mysqli_fetch_assoc($result);
-         $newQuan = intval($row["quantity"]) + 1;
-         $newQuantity = (string)$newkey;
+            $query2 = 'UPDATE purchases SET quantity =' . $newQuantity . ' WHERE purchases.prodID = ' . $prodID . ' AND purchases.cusID = ' . $cusID;
+            echo $query2;
+            echo "<br>";
 
-         $query2 = 'UPDATE purchases SET quanitity =' . $newQuantity . ' WHERE purchases.prodID = ' . $prodID . ' AND purchases.cusID = ' . $cusID;
-         echo $query2;
-         echo "<br>";
-
-         if (!mysqli_query($connection, $query2)) {
-               die("ERROR2: insert failed - " . mysqli_error($connection));
+            if (!mysqli_query($connection, $query2)) {
+                  die("ERROR2: insert failed - " . mysqli_error($connection));
+            }
          }
-
          echo "a purchase has been added";
          mysqli_close($connection);
       ?>
