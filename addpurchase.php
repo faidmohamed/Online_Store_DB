@@ -27,6 +27,8 @@
          $newQuantity = (string)$newkey;
 
          $query2 = 'UPDATE purchases SET quanitity =' . $newQuantity . ' WHERE purchases.prodID = ' . $prodID . ' AND purchases.cusID = ' . $cusID;
+         echo $query;
+         echo "<br>";
 
          if (!mysqli_query($connection, $query2)) {
                die("ERROR2: insert failed - " . mysqli_error($connection));
