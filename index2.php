@@ -35,7 +35,7 @@
     First Name:     <input type="text" name="firstname"><br>
     Last Name:      <input type="text" name="lastname"><br>
     City:           <input type="text" name="city"><br>
-    Phone Number:   <input type="text" name="phonenum"><br>
+    Phone Number:   <input type="text" name="phonenumber"><br>
     
     <input type="submit" value="Add Customer">
 </form>
