@@ -22,15 +22,16 @@
    $newkey = intval($row["maxid"]) + 1;
    $cusID = (string)$newkey;
    echo $cusID;
-   echo '<br>'
+   echo '<br>';
    echo $fname;
-   echo '<br>'
+   echo '<br>';
    echo $lname;
-   echo '<br>'
-   echo $city
-   echo '<br>'
+   echo '<br>';
+   echo $city;
+   echo '<br>';
    echo $phonenumber;
-   echo '<br>'
+   echo '<br>';
+   
    $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '")';
 
    if (!mysqli_query($connection, $query)) {
