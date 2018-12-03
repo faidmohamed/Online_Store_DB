@@ -24,13 +24,7 @@
          else{
             $row=mysqli_fetch_assoc($result);
             $newQuan = intval($row["quantity"]) + 1;
-            $newQuantity = (string)$newkey;
-            echo $row;
-            echo "<br>";
-            echo $newQuan;
-            echo "<br>";
-            echo $newQuantity;
-            echo "<br>";
+            $newQuantity = (string)$newQuan;
 
             $query2 = 'UPDATE purchases SET quantity =' . $newQuantity . ' WHERE purchases.prodID = ' . $prodID . ' AND purchases.cusID = ' . $cusID;
             echo $query2;
