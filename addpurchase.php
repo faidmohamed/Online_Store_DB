@@ -26,8 +26,8 @@
          $newQuan = intval($row["quantity"]) + 1;
          $newQuantity = (string)$newkey;
 
-         $query2 = 'UPDATE purchases SET quanitity =' . $newQuantity . 'WHERE purchases.prodID =' . 
-         $prodID . ' AND purchases.cusID =' . $cusID;
+         $query2 = 'UPDATE purchases SET quanitity =' . $newQuantity . ' WHERE purchases.prodID = ' . $prodID . ' AND purchases.cusID = ' . $cusID;
+
          if (!mysqli_query($connection, $query2)) {
                die("ERROR2: insert failed - " . mysqli_error($connection));
          }
