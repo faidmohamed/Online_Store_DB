@@ -17,6 +17,7 @@
 
          $result = mysqli_query($connection,$pull_query);
          if (!$result) {
+            echo "why?";
             $query = 'INSERT INTO purchases values("' . $cusID . '","' . $prodID . '", 1)';
             if (!mysqli_query($connection, $query)) {
                die("ERROR1: insert failed - " . mysqli_error($connection));
