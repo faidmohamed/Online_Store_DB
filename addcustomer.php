@@ -21,10 +21,20 @@
    $row=mysqli_fetch_assoc($result);
    $newkey = intval($row["maxid"]) + 1;
    $cusID = (string)$newkey;
+   echo $cusID;
+   echo '<br>'
+   echo $fname;
+   echo '<br>'
+   echo $lname;
+   echo '<br>'
+   echo $city
+   echo '<br>'
+   echo $phonenumber;
+   echo '<br>'
    $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '")';
 
    if (!mysqli_query($connection, $query)) {
-        die("Error: insert failed" . mysqli_error($connection));
+        die("ERROR: insert failed - " . mysqli_error($connection));
     }
    echo "a customer has been added";
    mysqli_close($connection);
