@@ -28,9 +28,7 @@
             die("ERROR2: " . mysqli_error($connection));
          }         
          while($row2 = mysqli_fetch_assoc($result2)){
-         echo $row2;
-         echo "<br>";
-         $cost = doubleval($row["cost"]);
+         $cost = $row["cost"];
          echo $cost;
          echo "<br>";
          }
