@@ -20,7 +20,7 @@
          }
          
          $row = mysqli_fetch_assoc($result);
-         if ($row["quantity"] == "") {
+         if (intval($row["quantity"])== 0) {
             $query = 'INSERT INTO purchases values("' . $cusID . '","' . $prodID . '", 1)';
             if (!mysqli_query($connection, $query)) {
                die("ERROR2: insert failed - " . mysqli_error($connection));
