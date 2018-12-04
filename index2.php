@@ -75,6 +75,7 @@
     Last Name:      <input type="text" name="lastname"><br>
     City:           <input type="text" name="city"><br>
     Phone Number:   <input type="text" name="phonenumber"><br>
+    Agent Number:   <input type="text" name="agentnumber"><br>
     
     <input type="submit" value="Add Customer">
 </form>

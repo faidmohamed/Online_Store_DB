@@ -13,6 +13,7 @@
    $lname = $_POST["lastname"];
    $city =  $_POST["city"];
    $phonenumber =  $_POST["phonenumber"];
+   $agentnumber =  $_POST["agentnumber"];
    $pull_query = 'SELECT MAX(cusID) AS maxid FROM customer';
    $result = mysqli_query($connection,$pull_query);
    if (!$result) {
@@ -31,7 +32,9 @@
    echo '<br>';
    echo $phonenumber;
    echo '<br>';
-   $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '", "11")';
+   echo $agentnumber;
+   echo '<br>';
+   $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '","' . $agentnumber . '",)';
    echo $query;
    echo "<br>";
    if (!mysqli_query($connection, $query)) {
