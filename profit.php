@@ -22,7 +22,7 @@
          echo "<br>";
          }
 
-         $query2 = "SELECT cost FROM product WHERE product.prodID =" . $prodID;
+         $query2 = "SELECT * FROM product WHERE product.prodID =" . $prodID;
          $result2=mysqli_query($connection,$query2);
          if (!$result2) {
             die("ERROR2: " . mysqli_error($connection));
