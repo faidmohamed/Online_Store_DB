@@ -93,5 +93,27 @@
     <input type="submit" value="Add Customer">
 </form>
 
+<h2> Customer Information: </h2>
+<form action="costasc.php" method="post">
+    <?php
+        $query = "SELECT * FROM customer ORDER BY lastname";
+        $result = mysqli_query($connection, $query);
+        if(!$result){
+            die("database query failed");
+        }
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<input type="radio" name = "customer" value = '
+                .$row["cusID"].'>'
+                .$row["firstname"].' '.$row["lastname"];
+            echo " -- ";
+            echo "Phone Number: ".$row["phonenumber"]."<br>"."<br>";
+        }
+        mysqli_free_result($result);
+    ?>
+New Phone Number:  <input type="text" name="newphone"><br>    
+<input type="submit" value="Update Phone Number">
+</form>
+<br>
+
 </body>
 </html>
