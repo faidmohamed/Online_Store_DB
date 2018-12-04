@@ -157,5 +157,23 @@ New Phone Number:  <input type="text" name="newphone"><br>
         ?>
     </ol>
 <br>
+<h2> Product Profit: </h2>
+<form action="profit.php" method="post">
+    <?php
+        $query = "SELECT description, prodID FROM product ORDER BY lastname";
+        $result = mysqli_query($connection, $query);
+        if(!$result){
+            die("database query failed");
+        }
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<input type="radio" name = "product" value = '
+                .$row["prodID"].'>'.$row["description"];
+            echo "<br>";
+        }
+        mysqli_free_result($result);
+    ?>
+<input type="submit" value="Get More information">
+</form> 
+<br>
 </body>
 </html>
