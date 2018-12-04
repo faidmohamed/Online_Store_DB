@@ -151,7 +151,7 @@ New Phone Number:  <input type="text" name="newphone"><br>
                 die("database query failed");
             }
             while ($row = mysqli_fetch_assoc($result)) {
-                echo "<li>".$row["description"]."</li>"
+                echo "<li>".$row["description"]."</li>";
             }
             mysqli_free_result($result);
         ?>
