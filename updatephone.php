@@ -17,15 +17,8 @@
          if (!mysqli_query($connection, $query)) {
                die("ERROR2: insert failed - " . mysqli_error($connection));
          }
-
-         $query2 = 'SELECT firstname, lastname FROM customer WHERE customer.cusID = ' . $cusID;
-         $result=mysqli_query($connection,$query);
-          if (!$result) {
-               die("database query2 failed.");
-           }
-         while($row=mysqli_fetch_assoc($result)){
-         echo $row["firstname"]. " ".$row["lastname"]."'s "."phone number has been updated successfully" ;
-         }
+      
+         echo "phone number has been updated successfully" ;
          mysqli_close($connection);
       ?>
    </body>
