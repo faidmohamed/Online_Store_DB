@@ -21,9 +21,9 @@
          }
 
          $query2 = "SELECT cost FROM product WHERE product.prodID =" . $prodID;
-         $result2=mysqli_query($connection2,$query2);
+         $result2=mysqli_query($connection,$query2);
          if (!$result2) {
-            die("ERROR2: " . mysqli_error($connection2));
+            die("ERROR2: " . mysqli_error($connection));
          }         
          while($row2 = mysqli_fetch_assoc($result2)){
          $cost = doubleval($row["cost"]);
@@ -33,7 +33,6 @@
          $revenue = (string)$Rev;
          echo "Total Revenue is: " . $Revenue;
          mysqli_close($connection);
-         mysqli_close($connection2);
       ?>
 
    <br><br>
