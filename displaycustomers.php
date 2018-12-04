@@ -12,8 +12,10 @@
       <?php
          $quantity =  $_POST["quantity"];
          $query = 'SELECT firstname, lastname, description FROM customer,product,purchases WHERE customer.cusID = purchases.cusID AND product.prodID = purchases.prodID AND quantity >'. $quantity. ' ORDER BY lastname, firstname';
+         echo $query;
+         echo "<br>";
          if (!mysqli_query($connection, $query)) {
-               die("ERROR: delete failed - " . mysqli_error($connection));
+               die("ERROR: " . mysqli_error($connection));
          }
          
          while ($row = mysqli_fetch_assoc($result)) {
