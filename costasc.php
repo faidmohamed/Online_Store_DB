@@ -28,7 +28,8 @@ include 'connectdb.php';
     echo "</ol>";
      mysqli_free_result($result);
     echo '<form action="costasc.php" method="post">';
-    echo '<input value = "'.$whichOwner.'">';    
+    echo '<input value = "'.$whichOwner.'">';
+    echo '</form>'    
 ?>
 </ol>
 
