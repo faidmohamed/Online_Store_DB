@@ -8,7 +8,7 @@
       <?php
          include 'connectdb.php';
       ?>
-      <h4>List of Customers and their respective purchases: </h4><br>
+      <h4>List of Customers and their respective purchases: </h4>
       <?php
          $quantity =  $_POST["quantity"];
          $query = 'SELECT firstname, lastname, description FROM customer,product,purchases WHERE customer.cusID = purchases.cusID AND product.prodID = purchases.prodID AND quantity >'. $quantity. ' ORDER BY lastname, firstname';
