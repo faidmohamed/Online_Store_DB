@@ -12,7 +12,7 @@
       <?php
          $cusID =  $_POST["customer"];
          $prodID = $_POST["product"];
-         $pull_query = 'SELECT * FROM purchases WHERE purchases.cusID = '. $prodID . ' AND purchases.cusID = ' .$cusID;
+         $pull_query = 'SELECT quantity FROM purchases WHERE purchases.cusID = '. $prodID . ' AND purchases.cusID = ' .$cusID;
 
          $result = mysqli_query($connection,$pull_query); 
          if (!$result) {
@@ -38,10 +38,11 @@
             if (!mysqli_query($connection, $query2)) {
                   die("ERROR3: insert failed - " . mysqli_error($connection));
             }
-         }
-      }
+         } 
+
          echo "the requested purchase has successfully been added";
          mysqli_close($connection);
+      }
       ?>
    </body>
 </html>
