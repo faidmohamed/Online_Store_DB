@@ -23,7 +23,6 @@
    $newkey = intval($row["maxid"]) + 1;
    $cusID = (string)$newkey;
    $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '","' . $agentnumber . '")';
-   echo $query;
    echo "<br>";
    if (!mysqli_query($connection, $query)) {
         die("ERROR: insert failed - " . mysqli_error($connection));

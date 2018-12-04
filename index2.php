@@ -7,10 +7,9 @@
 <?php
     include 'connectdb.php'
 ?>
-
+<h2> Customer Information: <h2>
 <form action="costasc.php" method="post">
     <?php
-        echo "<h4> Customers: </h4>";
         $query = "SELECT * FROM customer ORDER BY lastname";
         $result = mysqli_query($connection, $query);
         if(!$result){
