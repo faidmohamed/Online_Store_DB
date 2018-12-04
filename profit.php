@@ -29,7 +29,14 @@
          
          $Rev = $sum*$cost;
          $revenue = (string)$Rev;
-         echo "total Revenue is: " . $Revenue;
+         echo "Total Revenue is: " . $Revenue;
+
+         echo $sum;
+         echo "<br>";
+         echo $cost;
+         echo "<br>";
+         echo $Rev;
+         echo "<br>";
          mysqli_close($connection);
       ?>
 
