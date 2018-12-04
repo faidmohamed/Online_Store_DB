@@ -19,7 +19,7 @@
             die("ERROR1: insert failed - " . mysqli_error($connection));
          }
          
-         $row = mysqli_fetch_assoc($result);
+         while($row = mysqli_fetch_assoc($result)){
          echo $row["quantity"];
          echo "<br>";
          if (intval($row["quantity"])== 0) {
@@ -39,6 +39,7 @@
                   die("ERROR3: insert failed - " . mysqli_error($connection));
             }
          }
+      }
          echo "the requested purchase has successfully been added";
          mysqli_close($connection);
       ?>
