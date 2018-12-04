@@ -18,8 +18,6 @@
          }
          while($row = mysqli_fetch_assoc($result)){
          $sum = doubleval($row["s"]);
-         echo $sum;
-         echo "<br>";
          }
 
          $query2 = "SELECT * FROM product WHERE product.prodID =" . $prodID;
@@ -29,8 +27,6 @@
          }         
          while($row2 = mysqli_fetch_assoc($result2)){
          $cost = doubleval($row2["cost"]);
-         echo $cost;
-         echo "<br>";
          }
          
          $Revenue = $sum * $cost;
