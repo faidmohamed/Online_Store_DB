@@ -16,16 +16,18 @@
          if (!$result) {
             die("ERROR1: " . mysqli_error($connection));
          }
-         $row = mysqli_fetch_assoc($result);
+         while($row = mysqli_fetch_assoc($result)){
          $sum = intval($row["s"]);
+         }
 
          $query2 = "SELECT cost FROM product WHERE product.prodID =" . $prodID;
          $result2=mysqli_query($connection,$query2);
          if (!$result2) {
             die("ERROR2: " . mysqli_error($connection));
          }         
-         $row2 = mysqli_fetch_assoc($result2);
+         while($row2 = mysqli_fetch_assoc($result2)){
          $cost = intval($row["cost"]);
+         }
          
          $Rev = $sum*$cost;
          $revenue = (string)$Rev;
