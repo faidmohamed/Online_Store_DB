@@ -15,7 +15,7 @@
          echo $query;
          echo "<br>";
          $result=mysqli_query($connection,$query);
-         if (!$result)) {
+         if (!$result) {
                die("ERROR: " . mysqli_error($connection));
          }
          
