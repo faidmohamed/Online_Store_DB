@@ -135,6 +135,12 @@ New Phone Number:  <input type="text" name="newphone"><br>
 </form>
 <br>
 
+<h2> Display Customers who've made above a certain number of purchases: </h2>
+<form action="displaycustomers.php" method="post">
+    <input type="text" value="quantity">
+    <br>
+    <input type="submit" value="list customers">
+</form>
 
 </body>
 </html>
