@@ -75,14 +75,22 @@
     Last Name:      <input type="text" name="lastname"><br>
     City:           <input type="text" name="city"><br>
     Phone Number:   <input type="text" name="phonenumber"><br>
-    Agent Number:
+    Agent:
     <select name="agentname">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
+        <?php
+            $query = "SELECT * FROM agent ORDER BY lastname";
+            $result = mysqli_query($connection, $query);
+            if(!$result){
+                die("database query failed");
+            }
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo '<option value="'.$row["agentID"].'">'.$row["firstname"]." ".$row["lastname"].'</option>';
+                echo "<br>";
+            }
+            mysqli_free_result($result);
+        ?>
     </select>
-    
+    <br>
     <input type="submit" value="Add Customer">
 </form>
 
