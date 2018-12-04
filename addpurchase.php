@@ -14,11 +14,15 @@
          $prodID = $_POST["product"];
          $pull_query = 'SELECT * FROM purchases WHERE purchases.cusID = '. $prodID . ' AND purchases.cusID = ' .$cusID;
 
-         $result = mysqli_query($connection,$pull_query);
+         $result = mysqli_query($connection,$pull_query); 
+         $row = mysqli_fetch_assoc($result);
+         echo $query;
+         echo "<br>"
          if (!$result) {
+            die("ERROR1: insert failed - " . mysqli_error($connection));
+         }
+         if (!$row) {
             $query = 'INSERT INTO purchases values("' . $cusID . '","' . $prodID . '", 1)';
-            echo $query;
-            echo "<br>";
             if (!mysqli_query($connection, $query)) {
                die("ERROR1: insert failed - " . mysqli_error($connection));
             }
