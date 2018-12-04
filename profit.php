@@ -24,12 +24,12 @@
 
          $query2 = "SELECT cost FROM product WHERE product.prodID =" . $prodID;
          $result2=mysqli_query($connection,$query2);
-         echo $result2;
-         echo "<br>";
          if (!$result2) {
             die("ERROR2: " . mysqli_error($connection));
          }         
          while($row2 = mysqli_fetch_assoc($result2)){
+         echo $row2;
+         echo "<br>";
          $cost = doubleval($row["cost"]);
          echo $cost;
          echo "<br>";
