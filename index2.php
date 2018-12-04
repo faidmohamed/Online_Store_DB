@@ -94,7 +94,7 @@
 </form>
 
 <h2> Customer Information: </h2>
-<form action="costasc.php" method="post">
+<form action="updatephone.php" method="post">
     <?php
         $query = "SELECT * FROM customer ORDER BY lastname";
         $result = mysqli_query($connection, $query);
