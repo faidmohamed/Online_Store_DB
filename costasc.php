@@ -28,22 +28,22 @@ include 'connectdb.php';
     echo "</ol>";
      mysqli_free_result($result);
     echo '<form action="costasc.php" method="post">';
-    echo '<input type="hidden" input value = "'.$whichOwner.'">';
+    echo '<input type="hidden" value = "'.$whichOwner.'">';
     echo '<input type="submit" value="sort by cost: ascending">';
     echo '</form>';
     
     echo '<form action="desc.php" method="post">';
-    echo '<input type="hidden" input value = "'.$whichOwner.'">';
+    echo '<input type="hidden" value = "'.$whichOwner.'">';
     echo '<input type="submit" value="sort by cost: descending">';
     echo '</form>';
     
     echo '<form action="descasc.php" method="post">';
-    echo '<input type="hidden" input value = "'.$whichOwner.'">';
+    echo '<input type="hidden" value = "'.$whichOwner.'">';
     echo '<input type="submit" value="sort by description: ascending">';
     echo '</form>';
     
     echo '<form action="descdesc.php" method="post">';
-    echo '<input type="hidden" input value = "'.$whichOwner.'">';
+    echo '<input type="hidden" value = "'.$whichOwner.'">';
     echo '<input type="submit" value="sort by description: descending">';
     echo '</form>';        
 ?>
