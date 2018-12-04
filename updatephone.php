@@ -13,11 +13,10 @@
          $cusID =  $_POST["customer"];
          $newphone = $_POST["newphone"];
          $query = 'UPDATE customer SET phonenumber ="' . $newphone . '" WHERE customer.cusID = ' . $cusID;
-         echo $query;
          if (!mysqli_query($connection, $query)) {
                die("ERROR2: insert failed - " . mysqli_error($connection));
          }
-         else      
+         else
             echo "phone number has been updated successfully" ;
          mysqli_close($connection);
       ?>
