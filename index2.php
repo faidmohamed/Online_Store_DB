@@ -142,6 +142,20 @@ New Phone Number:  <input type="text" name="newphone"><br>
     <input type="submit" value="list customers">
 </form>
 
-
+<h2> Products that have Yet to be Purchased: </h2>
+    <ol>
+        <?php
+            $query = "SELECT description FROM product WHERE product.description NOT IN (SELECT DISTINCT description FROM customer,product,purchases WHERE customer.cusID = purchases.cusID AND product.prodID = purchases.prodID)"
+            $result = mysqli_query($connection, $query);
+            if(!$result){
+                die("database query failed");
+            }
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<li>".$row["description"]."</li>"
+            }
+            mysqli_free_result($result);
+        ?>
+    </ol>
+<br>
 </body>
 </html>
