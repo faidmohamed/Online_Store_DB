@@ -29,30 +29,25 @@ include 'connectdb.php';
      mysqli_free_result($result);
     echo '<form action="costasc.php" method="post">';
     echo '<input type="hidden" input value = "'.$whichOwner.'">';
-    //echo '<input type="submit" value="sort by cost: ascending">';
+    echo '<input type="submit" value="sort by cost: ascending">';
     echo '</form>';
     
     echo '<form action="desc.php" method="post">';
     echo '<input type="hidden" input value = "'.$whichOwner.'">';
-    //echo '<input type="submit" value="sort by cost: descending">';
+    echo '<input type="submit" value="sort by cost: descending">';
     echo '</form>';
     
     echo '<form action="descasc.php" method="post">';
     echo '<input type="hidden" input value = "'.$whichOwner.'">';
-    //echo '<input type="submit" value="sort by description: ascending">';
+    echo '<input type="submit" value="sort by description: ascending">';
     echo '</form>';
     
     echo '<form action="descdesc.php" method="post">';
     echo '<input type="hidden" input value = "'.$whichOwner.'">';
-    //echo '<input type="submit" value="sort by description: descending">';
+    echo '<input type="submit" value="sort by description: descending">';
     echo '</form>';        
 ?>
 </ol>
-
-<input type="submit" value="sort by cost: ascending">
-<input type="submit" value="sort by cost: descending">
-<input type="submit" value="sort by description: ascending">
-<input type="submit" value="sort by description: descending">
 <br><br>
 <form action="index2.php" method="post">
 <input type="submit" value="go back">
