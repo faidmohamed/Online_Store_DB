@@ -8,12 +8,10 @@
       <?php
          include 'connectdb.php';
       ?>
-
+      <h4>List of Customers and their respective purchases: </h4><br>
       <?php
          $quantity =  $_POST["quantity"];
          $query = 'SELECT firstname, lastname, description FROM customer,product,purchases WHERE customer.cusID = purchases.cusID AND product.prodID = purchases.prodID AND quantity >'. $quantity. ' ORDER BY lastname, firstname';
-         echo $query;
-         echo "<br>";
          $result=mysqli_query($connection,$query);
          if (!$result) {
                die("ERROR: " . mysqli_error($connection));
