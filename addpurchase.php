@@ -17,7 +17,7 @@
          $result = mysqli_query($connection,$pull_query); 
          $row = mysqli_fetch_assoc($result);
          echo $query;
-         echo "<br>"
+         echo "<br>";
          if (!$result) {
             die("ERROR1: insert failed - " . mysqli_error($connection));
          }
