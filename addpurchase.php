@@ -20,6 +20,8 @@
          }
          
          $row = mysqli_fetch_assoc($result);
+         echo intval($row["quantity"])== 0;
+         echo "<br>";
          if (intval($row["quantity"])== 0) {
             $query = 'INSERT INTO purchases values("' . $cusID . '","' . $prodID . '", 1)';
             if (!mysqli_query($connection, $query)) {
