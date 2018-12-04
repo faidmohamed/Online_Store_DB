@@ -157,7 +157,7 @@ New Phone Number:  <input type="text" name="newphone"><br>
         ?>
     </ol>
 <br>
-<h2> Product Profit: </h2>
+<h2> Product Revenue: </h2>
 <form action="profit.php" method="post">
     <?php
         $query = "SELECT description, prodID FROM product ORDER BY description";
@@ -172,7 +172,7 @@ New Phone Number:  <input type="text" name="newphone"><br>
         }
         mysqli_free_result($result);
     ?>
-<input type="submit" value="Get More information">
+<input type="submit" value="Get Revenue">
 </form> 
 <br>
 </body>
