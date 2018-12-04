@@ -15,20 +15,19 @@
          $pull_query = 'SELECT * FROM purchases WHERE purchases.cusID = '. $prodID . ' AND purchases.cusID = ' .$cusID;
 
          $result = mysqli_query($connection,$pull_query); 
-         $row = mysqli_fetch_assoc($result);
-         echo $query;
-         echo "<br>";
          if (!$result) {
             die("ERROR1: insert failed - " . mysqli_error($connection));
          }
+         
+         $row = mysqli_fetch_assoc($result);
          if (!$row) {
             $query = 'INSERT INTO purchases values("' . $cusID . '","' . $prodID . '", 1)';
             if (!mysqli_query($connection, $query)) {
                die("ERROR1: insert failed - " . mysqli_error($connection));
             }
          }
+
          else{
-            $row = mysqli_fetch_assoc($result);
             $newQuan = intval($row["quantity"]) + 1;
             $newQuantity = (string)$newQuan;
 
