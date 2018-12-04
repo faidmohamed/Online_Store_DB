@@ -17,12 +17,14 @@
          $result = mysqli_query($connection,$pull_query);
          if (!$result) {
             $query = 'INSERT INTO purchases values("' . $cusID . '","' . $prodID . '", 1)';
+            echo $query;
+            echo "<br>";
             if (!mysqli_query($connection, $query)) {
                die("ERROR1: insert failed - " . mysqli_error($connection));
             }
          }
          else{
-            $row=mysqli_fetch_assoc($result);
+            $row = mysqli_fetch_assoc($result);
             $newQuan = intval($row["quantity"]) + 1;
             $newQuantity = (string)$newQuan;
 
