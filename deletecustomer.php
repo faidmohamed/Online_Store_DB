@@ -16,7 +16,7 @@
                die("ERROR: delete failed - " . mysqli_error($connection));
          }
          else
-            echo "phone number has been updated successfully" ;
+            echo "customer successfully removed" ;
          mysqli_close($connection);
       ?>
    </body>
