@@ -115,7 +115,7 @@ New Phone Number:  <input type="text" name="newphone"><br>
 </form>
 <br>
 
-<h2> Change Customer Phone Number: </h2>
+<h2> Remove Customer: </h2>
 <form action="updatephone.php" method="post">
     <?php
         $query = "SELECT * FROM customer ORDER BY lastname";
