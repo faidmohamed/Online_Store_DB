@@ -20,4 +20,10 @@
          mysqli_close($connection);
       ?>
    </body>
+
+   <br><br>
+   <form action="index2.php" method="post">
+   <input type="submit" value="go back">
+   </form> 
+
 </html>

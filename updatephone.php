@@ -20,5 +20,11 @@
             echo "phone number has been updated successfully" ;
          mysqli_close($connection);
       ?>
+
+   <br><br>
+   <form action="index2.php" method="post">
+   <input type="submit" value="go back">
+   </form> 
+
    </body>
 </html>
