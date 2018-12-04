@@ -23,7 +23,7 @@
          if (!$row) {
             $query = 'INSERT INTO purchases values("' . $cusID . '","' . $prodID . '", 1)';
             if (!mysqli_query($connection, $query)) {
-               die("ERROR1: insert failed - " . mysqli_error($connection));
+               die("ERROR2: insert failed - " . mysqli_error($connection));
             }
          }
 
@@ -34,7 +34,7 @@
             $query2 = 'UPDATE purchases SET quantity =' . $newQuantity . ' WHERE purchases.prodID = ' . $prodID . ' AND purchases.cusID = ' . $cusID;
 
             if (!mysqli_query($connection, $query2)) {
-                  die("ERROR2: insert failed - " . mysqli_error($connection));
+                  die("ERROR3: insert failed - " . mysqli_error($connection));
             }
          }
          echo "the requested purchase has successfully been added";
