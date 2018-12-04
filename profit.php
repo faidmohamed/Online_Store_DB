@@ -23,6 +23,8 @@
          }
 
          $query2 = "SELECT * FROM product WHERE product.prodID =" . $prodID;
+         echo $query2;
+         echo "<br>";
          $result2=mysqli_query($connection,$query2);
          if (!$result2) {
             die("ERROR2: " . mysqli_error($connection));
