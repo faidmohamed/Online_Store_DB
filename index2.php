@@ -70,12 +70,18 @@
 
 
 <h2> Add Customer:</h2> <!-- form to add a new customer to the database -->
-<form action="addcustomer.php" method="post" >
+<form action="addcustomer.php" method="post" id = "addcustomerform" >
     First Name:     <input type="text" name="firstname"><br>
     Last Name:      <input type="text" name="lastname"><br>
     City:           <input type="text" name="city"><br>
     Phone Number:   <input type="text" name="phonenumber"><br>
-    Agent Number:   <input type="text" name="agentnumber"><br>
+    Agent Number:
+    <select name="agentname">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+    </select>
     
     <input type="submit" value="Add Customer">
 </form>
