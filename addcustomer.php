@@ -31,8 +31,7 @@
    echo '<br>';
    echo $phonenumber;
    echo '<br>';
-
-   $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '", 11)';
+   $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '", "11")';
    echo $query;
    echo "<br>";
    if (!mysqli_query($connection, $query)) {
