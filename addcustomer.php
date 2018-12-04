@@ -22,18 +22,6 @@
    $row=mysqli_fetch_assoc($result);
    $newkey = intval($row["maxid"]) + 1;
    $cusID = (string)$newkey;
-   echo $cusID;
-   echo '<br>';
-   echo $fname;
-   echo '<br>';
-   echo $lname;
-   echo '<br>';
-   echo $city;
-   echo '<br>';
-   echo $phonenumber;
-   echo '<br>';
-   echo $agentnumber;
-   echo '<br>';
    $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '","' . $agentnumber . '")';
    echo $query;
    echo "<br>";
