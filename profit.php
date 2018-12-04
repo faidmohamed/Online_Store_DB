@@ -17,7 +17,7 @@
             die("ERROR1: " . mysqli_error($connection));
          }
          while($row = mysqli_fetch_assoc($result)){
-         $sum = intval($row["s"]);
+         $sum = doubleval($row["s"]);
          }
 
          $query2 = "SELECT cost FROM product WHERE product.prodID =" . $prodID;
@@ -26,7 +26,7 @@
             die("ERROR2: " . mysqli_error($connection));
          }         
          while($row2 = mysqli_fetch_assoc($result2)){
-         $cost = intval($row["cost"]);
+         $cost = doubleval($row["cost"]);
          }
          
          $Rev = $sum*$cost;
