@@ -160,7 +160,7 @@ New Phone Number:  <input type="text" name="newphone"><br>
 <h2> Product Profit: </h2>
 <form action="profit.php" method="post">
     <?php
-        $query = "SELECT description, prodID FROM product ORDER BY lastname";
+        $query = "SELECT description, prodID FROM product ORDER BY description";
         $result = mysqli_query($connection, $query);
         if(!$result){
             die("database query failed");
