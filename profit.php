@@ -24,7 +24,7 @@
          $cost = intval($row["cost"]);
          $Rev = $sum*$cost;
          $revenue = (string)$Rev;
-         echo "total Revenue is:" $Revenue;
+         echo "total Revenue is: " . $Revenue;
          mysqli_close($connection);
 
       ?>
@@ -33,7 +33,7 @@
    <form action="index2.php" method="post">
    <input type="submit" value="go back">
    </form> 
-   
+
    </body>
 
 
