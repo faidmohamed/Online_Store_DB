@@ -26,13 +26,12 @@ include 'connectdb.php';
         echo '</li>';
      }
     echo "</ol>";
-     mysqli_free_result($result);
     echo '<form action="costasc.php" method="post">';
     echo '<input type="hidden" name="customer" value = "'.$whichOwner.'">';
     echo '<input type="submit" value="sort by cost: ascending">';
     echo '</form>';
     
-    echo '<form action="desc.php" method="post">';
+    echo '<form action="costdesc.php" method="post">';
     echo '<input type="hidden" name="customer" value = "'.$whichOwner.'">';
     echo '<input type="submit" value="sort by cost: descending">';
     echo '</form>';
@@ -45,7 +44,8 @@ include 'connectdb.php';
     echo '<form action="descdesc.php" method="post">';
     echo '<input type="hidden" name="customer" input value = "'.$whichOwner.'">';
     echo '<input type="submit" value="sort by description: descending">';
-    echo '</form>';        
+    echo '</form>'; 
+    mysqli_free_result($result);
 ?>
 </ol>
 <br><br>
