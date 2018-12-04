@@ -11,7 +11,7 @@
 
       <?php
          $quantity =  $_POST["quantity"];
-         $query = 'SELECT firstname, lastname, description FROM customer,product,purchases WHERE customer.cusID = purchases.cusID AND product.prodID = purchases.prodID AND quantity >'. $quantity. 'ORDER BY lastname, firstname';
+         $query = 'SELECT firstname, lastname, description FROM customer,product,purchases WHERE customer.cusID = purchases.cusID AND product.prodID = purchases.prodID AND quantity >'. $quantity. ' ORDER BY lastname, firstname';
          if (!mysqli_query($connection, $query)) {
                die("ERROR: delete failed - " . mysqli_error($connection));
          }
