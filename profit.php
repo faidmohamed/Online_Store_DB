@@ -34,6 +34,9 @@
          }
          
          $Rev = $sum * $cost;
+
+         echo $Rev;
+         echo "<br>";
          $revenue = (string)$Rev;
          echo "Total Revenue is: " . $Revenue;
          mysqli_close($connection);
