@@ -23,8 +23,9 @@
           if (!$result) {
                die("database query2 failed.");
            }
-         $row=mysqli_fetch_assoc($result);
+         while($row=mysqli_fetch_assoc($result)){
          echo $row["firstname"]. " ".$row["lastname"]."'s "."phone number has been updated successfully" ;
+         }
          mysqli_close($connection);
       ?>
    </body>
