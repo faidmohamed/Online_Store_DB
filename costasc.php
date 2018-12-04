@@ -27,10 +27,11 @@ include 'connectdb.php';
      }
     echo "</ol>";
      mysqli_free_result($result);
+    echo '<form action="costasc.php" method="post">';
+    echo '<input value = "'.$whichOwner.'">';    
 ?>
 </ol>
 
-<form action="costasc.php" method="post">
 <input type="submit" value="sort by cost: ascending">
 </form> 
 <form action="costdesc.php" method="post">
@@ -41,8 +42,8 @@ include 'connectdb.php';
 </form>
 <form action="descdesc.php" method="post">
 <input type="submit" value="sort by description: descending">
-</form> 
-
+</form>
+<br><br>
 <form action="index2.php" method="post">
 <input type="submit" value="go back">
 </form> 
