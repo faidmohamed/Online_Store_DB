@@ -45,6 +45,7 @@
                 echo "<br>";
             }
             mysqli_free_result($result);
+            
         ?>
     <br><br>
         <?php
