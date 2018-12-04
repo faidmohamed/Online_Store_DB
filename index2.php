@@ -7,7 +7,7 @@
 <?php
     include 'connectdb.php'
 ?>
-<h2> Customer Information: <h2>
+<h2> Customer Information: </h2>
 <form action="costasc.php" method="post">
     <?php
         $query = "SELECT * FROM customer ORDER BY lastname";
