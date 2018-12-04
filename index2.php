@@ -76,7 +76,7 @@
     City:           <input type="text" name="city"><br>
     Phone Number:   <input type="text" name="phonenumber"><br>
     Agent:
-    <select name="agentname">
+    <input type = "select" name="agentname">
         <?php
             $query = "SELECT * FROM agent ORDER BY lastname";
             $result = mysqli_query($connection, $query);
