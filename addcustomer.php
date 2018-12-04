@@ -33,7 +33,8 @@
    echo '<br>';
 
    $query = 'INSERT INTO customer VALUES("' . $cusID . '","' . $fname . '","'. $lname . '","' . $city . '","' . $phonenumber . '")';
-
+   echo $query;
+   echo "<br>";
    if (!mysqli_query($connection, $query)) {
         die("ERROR: insert failed - " . mysqli_error($connection));
     }
