@@ -127,9 +127,10 @@ New Phone Number:  <input type="text" name="newphone"><br>
             echo '<input type="radio" name = "customer" value = '
                 .$row["cusID"].'>'
                 .$row["firstname"].' '.$row["lastname"];
+            echo "<br>";
         }
         mysqli_free_result($result);
-    ?>  
+    ?>
 <input type="submit" value="Delete Customer">
 </form>
 <br>
