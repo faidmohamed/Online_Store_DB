@@ -30,6 +30,7 @@
          }
          
          $Revenue = $sum * $cost;
+         echo "Total purchases: ". $sum;
          echo "Total Revenue is: " . $Revenue;
          mysqli_close($connection);
       ?>
