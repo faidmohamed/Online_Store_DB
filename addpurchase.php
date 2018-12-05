@@ -22,7 +22,7 @@
             die("ERROR1: insert failed - " . mysqli_error($connection));
          }
 
-         $row = mysqli_fetch_assoc($result)
+         $row = mysqli_fetch_assoc($result);
          echo $row["quantity"];
          echo "<br>";
          if (intval($row["quantity"])== 0) {
