@@ -14,6 +14,9 @@
          $prodID = $_POST["product"];
          $pull_query = 'SELECT quantity FROM purchases WHERE purchases.cusID = '. $prodID . ' AND purchases.cusID = ' .$cusID;
 
+         echo $pull_query;
+         echo "<br>";
+
          $result = mysqli_query($connection,$pull_query); 
          if (!$result) {
             die("ERROR1: insert failed - " . mysqli_error($connection));
