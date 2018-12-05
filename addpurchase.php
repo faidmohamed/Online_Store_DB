@@ -21,8 +21,8 @@
          if (!$result) {
             die("ERROR1: insert failed - " . mysqli_error($connection));
          }
-         
-         while($row = mysqli_fetch_assoc($result)){
+
+         $row = mysqli_fetch_assoc($result)
          echo $row["quantity"];
          echo "<br>";
          if (intval($row["quantity"])== 0) {
@@ -45,7 +45,6 @@
 
          echo "the requested purchase has successfully been added";
          mysqli_close($connection);
-      }
       ?>
    </body>
 </html>
